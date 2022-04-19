@@ -23,6 +23,40 @@ class Camunda::Task < Camunda::Model
     find_by!(processInstanceBusinessKey: instance_business_key, taskDefinitionKey: task_key)
   end
 
+  def self.find_by_options!(options)
+    find_by!(options)
+  end
+
+  # @example
+  #   user_task = Camunda::Task.find_by_business_key_and_task_definition_key!('WorkflowBusinessKey','UserTask')
+  # @param instance_business_key [String] the process instance business key
+  # @param task_key [String] id/key of the user task
+  # @return [Camunda::Task]
+  def self.find_by_business_key_and_task_definition_key(instance_business_key, task_key)
+    find_by(processInstanceBusinessKey: instance_business_key, taskDefinitionKey: task_key)
+  end
+
+  # @example
+  #   user_task = Camunda::Task.find_by_business_key_and_task_definition_key!('WorkflowBusinessKey','UserTask')
+  # @param instance_business_key [String] the process instance business key
+  # @param task_key [String] id/key of the user task
+  # @return [Camunda::Task]
+  def self.find_by_business_key_and_task_definition_key(instance_business_key, task_key)
+    find_by(processInstanceBusinessKey: instance_business_key, taskDefinitionKey: task_key)
+  end
+
+  # @example
+  #   user_task = Camunda::Task.find_by_business_key_and_task_definition_key!('WorkflowBusinessKey','UserTask')
+  # @param instance_business_key [String] the process instance business key
+  # @param task_key [String] id/key of the user task
+  # @return [Camunda::Task]
+  def self.find_by_business_key_and_task_definition_key(instance_business_key, task_key)
+    find_by(processInstanceBusinessKey: instance_business_key, taskDefinitionKey: task_key)
+  end
+
+  # @example
+  #   user_task = Camunda::Task.find_by_business_key_and_task_definition_key!('WorkflowBusiness
+
   # Complete a task and updates process variables.
   # @example
   #   user_task = Camunda::Task.find_by_business_key_and_task_definition_key!('WorkflowBusinessKey','UserTask')
